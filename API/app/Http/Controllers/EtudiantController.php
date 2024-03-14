@@ -92,7 +92,7 @@ class EtudiantController extends Controller
 
             return response()->json(['message' => 'Connexion réussie'], 200);
         } catch (\Exception $e) {
-            return response()->json(['error' => 'Erreur lors de la connexion'], 500);
+            return response()->json(['error' => 'Erreur lors de la connexion', 'details' => $e->getMessage()], 500);
         }
     }
 }

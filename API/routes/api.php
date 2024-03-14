@@ -2,8 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\EtudiantController;
+use App\Http\Controllers\NoteController;
+use App\Http\Controllers\UEController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -24,3 +25,8 @@ Route::get('/etudiants/{matricule}', [EtudiantController::class, 'getStudent']);
 
 Route::post('/inscription', [EtudiantController::class, 'addStudentRegistration']);
 Route::post('/connexion', [EtudiantController::class, 'studentLogin']);
+
+Route::post('/ue', [UEController::class, 'add_ue']);
+Route::get('/ue/{code_UE}', [EtudiantController::class, 'get_UE']);
+
+Route::post('/note', [NoteController::class, 'noter']);
