@@ -42,6 +42,8 @@ class BulletinController extends Controller
 
             $bulletin[] = [
                 'code_UE' => $ue->code_UE,
+                'intitulé' => $ue->intitulé,
+                'credit' => $ue->credit,
                 'note' => $note ? $note->note : 0,
                 'statut' => $note ? $note->statut : 0,
             ];
