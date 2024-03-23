@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EtudiantController;
 use App\Http\Controllers\NoteController;
 use App\Http\Controllers\UEController;
+use App\Http\Controllers\BulletinController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -30,3 +31,15 @@ Route::post('/ue', [UEController::class, 'add_ue']);
 Route::get('/ue/{code_UE}', [EtudiantController::class, 'get_UE']);
 
 Route::post('/note', [NoteController::class, 'noter']);
+
+Route::post('/bulletin', [BulletinController::class, 'getBulletin']);
+
+
+#Route pour afficher la note d'un etudiant dans une matiere ( avec matricule et matiere)
+
+#Route pour afficher toutes les infos (avec le matricule et le semestre)
+
+#connexion admin
+
+
+
